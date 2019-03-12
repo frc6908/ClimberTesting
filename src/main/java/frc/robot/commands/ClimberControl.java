@@ -27,11 +27,11 @@ public class ClimberControl extends Command {
   @Override
   protected void execute() {
 
-    double climberInput = 0.5 * Robot.m_oi.controller.getY(Hand.kLeft);
-    double climberWheelInput = 0.5 * Robot.m_oi.controller.getY(Hand.kRight);
+    double climberInput = -0.5 * Robot.m_oi.controller.getY(Hand.kLeft);
+    double climberWheelInput = -1 * Robot.m_oi.controller.getY(Hand.kRight);
 
-    // RobotMap.climber.set(climberInput);
-    // RobotMap.climberWheel.set(climberWheelInput);
+    RobotMap.climber.set(climberInput);
+    RobotMap.climberWheel.set(climberWheelInput);
 
     System.out.println("Climber Speed: " + climberInput);
     System.out.println("Climber Wheel Speed: " + climberWheelInput);
